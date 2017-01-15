@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background: #d2b48c;
+    font-size: 15px;
+}
+#header {
+    background: url("http://vsookoshkax.ru/foto/fon.png") repeat;
+    width: 100%;
+    height: 185px;
+    text-align: center;
+}
+table{
+    color: #fffddf;
+    width: 100%;
+    background: #4c3c18;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    font-size: 25px;
+    margin: 0 auto;
+}
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    text-align: center;
+}
+a:visited, a, a:link, a:active, a:hover{
+    color:  #4c3c18;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    width: 220px;
+    color: #4c3c18;
+    margin: 5px;
+
+}
+.border {
+    padding-bottom: 10px;
+    border-bottom: 5px solid #4c3c18;
+    width: 215px;
+}
+.right {
+    position: absolute;
+    right: 0;
+    width: 230px;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.center{
+    text-align: justify;
+    border: 2px solid #4c3c18;
+    padding: 6px;
+    background: #fffddf;
+    color: #000;
+    margin:  0 230px;
+    font-size: 16px;
+    min-height: 1126px;
+}
+.center p {
+    text-indent: 1.5em;
+}
+hr {
+    border: none;
+    color: #4c3c18;
+    background-color: #4c3c18;
+    height: 1px;
+}
+.footer{
+    padding: 5px;
+    color: #4c3c18;
+    text-align: center;
+    font-size: 18px;
+}
+#k {
+    width: 650px;
+    height: 2px;
+
+}
