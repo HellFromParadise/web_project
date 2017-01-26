@@ -23,7 +23,7 @@ tr{
     border-color: inherit;
     text-align: center;
 }
-a:visited, a, a:link, a:active, a:hover{
+a:visited, a, a:link,  a:hover{
     color:  #4c3c18;
 }
 
@@ -77,8 +77,4 @@ hr {
 #k {
     width: 650px;
     height: 2px;
-
-
-
-
 }
