@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset = "utf-8">
+	<style type="text/css">
+		body{
+			background-image: url(https://pp.vk.me/c620031/v620031923/17a47/FYNuktT53OU.jpg) ;
+			background-repeat: no-repeat;
+			background-position: top;
+			background-size: cover;
+			font-family: "Malgun Gothic";
+            height: 100vh; 
+			}
+		#login_block{
+			width: 350px;
+			min-height: 150px;
+			background-color: rgba(255,255,255,.3);
+			display: inline-block;
+		}
+		#right_block{
+            margin-right: 20px;
+			margin-top: 20px;
+			float: right;
+		}		
+
+		#linkblock{
+			margin-top: 10px;
+			margin-left: calc((100% - 220px) / 2);;
+		}
+		.button{
+			margin-top: 5px;
+			margin-right: 36px;
+            min-width: 70px;
+            height: 25px;
+            
+		}
+        .headblock{
+            font-size: 21px;
+            padding: 0;
+            text-align: center;
+            border-bottom: 1px solid grey;  
+        }
+        .bodyblock{
+            border-top: 1px solid white;
+            padding-top: 10px;
+            width: 350px;
+			min-height: 200px;
+            padding-bottom: 10px;
+        }
+        .bodyblock > input {
+            height: 25px;
+			width: 270px;
+			margin-top: 5px;
+			margin-left: calc((100% - 270px) / 2);
+			font-size:  11pt;
+        }
+        #registration_block{
+            display: none;
+            width: 350px;
+			min-height: 200px;
+			background-color: rgba(255,255,255,.3);
+            padding-top: 5px;
+        }
+        .button_block{
+            text-align: right;
+        }
+        #left_block{
+            background-color: rgba(255,255,255,.3);
+            float: left;
+        }
+	</style>
+</head>
+<body>
+	<div id = "left_block">
+     <div id="title">
+         
+     </div>
+	</div>
+	<div id = "right_block">
+		<div id = "login_block">
+            <div class = "headblock">
+			   <p>Вход</p>
+			</div>
+            <form class="bodyblock" id="loginForm">
+			     <input type="text" name=login placeholder = "Введите логин" >
+			     <input type="password" name=password placeholder = "Введите пароль">
+                 <div class = "button_block">
+			         <button class= "button" type="submit">Войти</button>
+                 </div>
+	        </form>	
+		</div>
+         <div id = "registration_block">
+            <div class = "headblock">
+                <p>Регистрация</p>
+            </div>
+            <form class = "bodyblock">
+                <input type = "text" placeholder = "Введите ваше имя">
+                <input type = "text" placeholder = "Введите вашу фамилию" >
+                <input type = "text" placeholder = "Придумайте логин">
+                <input type = "password" placeholder = "Придумайте пароль">
+                <input type = "password" placeholder = "Повторите пароль">
+                <div class = "button_block">
+                    <button class = "button"  id="send" type = "submit">Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+		<div id = "linkblock">
+			<a href = "regpage.html" id = "link">Еще не зарегистрированы?</a>
+  
+        </div>
+       
+	</div>
+    <script src="jquery-3.1.1.min.js"></script>
+	<script>
+       document.getElementById("send").onclick = function(){
+           
+       }
+       document.getElementById("link").onclick = function(e){
+           e.preventDefault();
+           document.getElementById("login_block").style.display = "none";
+           document.getElementById("registration_block").style.display = "block";
+       }
+       var loginForm = $('#loginForm');
+       loginForm.on('submit',function(e)
+       {
+            e.preventDefault();
+            
+            var data = {
+                login: loginForm.find('[name=login]').val(),
+                password: loginForm.find('[name=password]').val(),
+            };
+            
+            $.ajax({
+                url: "",
+                data: data,
+                method: "post",
+                dataType: "json",
+            }).success(function(done){
+                // When script finish
+                
+            }).error(function(data)
+            {
+                
+            });
+       });
+    </script>
+</body>
+</html>
